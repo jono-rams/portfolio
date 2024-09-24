@@ -1,5 +1,5 @@
-import NavBar from './components/NavBar';
 import './App.css';
+import NavBar from './components/NavBar';
 import ProjectGrid from './components/ProjectGrid';
 
 function App() {

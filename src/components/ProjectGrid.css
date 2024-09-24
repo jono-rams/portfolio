@@ -1,0 +1,22 @@
+.card-img-top {
+  width: 100%; 
+  position: relative; /* To position the image absolutely within the container */
+}
+
+.card-img-top img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+
+.card {
+  background-color: #222; /* Dark background */
+  border: 1px solid #333;
+}
+
+.card-footer {
+  height: 100px; 
+}

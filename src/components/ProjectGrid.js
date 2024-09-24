@@ -3,7 +3,7 @@ import './ProjectGrid.css';
 
 const ProjectGrid = () => {
   
-  const projs = [
+  const projects = [
     {
       image: '/imgs/memory.png',
       title: 'Memory Matching Game',
@@ -29,9 +29,6 @@ const ProjectGrid = () => {
       technologies: ['React', 'Babel', 'Webpack']
     }
   ];
-
-  const [projects, setProjects] = useState(projs);
-  console.log(projects);
 
   const techColors = {
     'React': 'cyan',

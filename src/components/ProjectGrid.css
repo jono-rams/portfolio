@@ -19,4 +19,6 @@
 
 .card-footer {
   height: 100px; 
+  align-content: space-around;
+  align-items: center;
 }

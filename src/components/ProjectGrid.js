@@ -1,7 +1,7 @@
 import './ProjectGrid.css';
 
 const ProjectGrid = () => {
-  
+
   const projects = [
     {
       image: '/imgs/memory.png',
@@ -43,29 +43,28 @@ const ProjectGrid = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="container text-center">
+      <div className="row row-cols-2">
         {projects.map((project) => (
-          <div className="col-md-6 mb-4" key={project.title}>
+          <div className="col mb-4" key={project.title}>
             <div className="card">
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <img src={project.image} className="card-img-top" alt={project.title} />
                 <div className="card-body">
                   <h5 className="card-title">{project.title}</h5>
-
+                </div>
+                <div className="card-footer">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="badge rounded-pill me-2 fs-6 text-dark"
+                      style={{ backgroundColor: techColors[tech] || 'gray' }}
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </a>
-              <div className="card-footer">
-                {project.technologies.map((tech) => (
-                  <span
-                    key={tech}
-                    className="badge rounded-pill me-2 text-dark"
-                    style={{ backgroundColor: techColors[tech] || 'gray' }}
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         ))}

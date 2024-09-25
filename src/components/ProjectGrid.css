@@ -14,11 +14,28 @@
 
 .card {
   background-color: #222; /* Dark background */
-  border: 1px solid #333;
+  border: 1px solid #777;
+}
+
+.card-body {
+  height: 80px;
+  align-content: center;
 }
 
 .card-footer {
-  height: 100px; 
+  height: 80px; 
   align-content: space-around;
   align-items: center;
+}
+.card-footer span {
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+.card a{
+  color: #c739ff;
+  text-decoration-color: #c739ff;
+}
+
+.card-title {
+  letter-spacing: 2px;
 }

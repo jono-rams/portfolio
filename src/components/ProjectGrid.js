@@ -30,11 +30,11 @@ const ProjectGrid = () => {
   ];
 
   const techColors = {
-    'React': 'cyan',
+    'React': '#00bbbb',
     'Node.js': 'green',
     'Express': 'orange',
     'MongoDB': 'darkgreen',
-    'Firebase': 'yellow',
+    'Firebase': '#dddd00',
     'Vanilla JS': 'purple',
     'Webpack': 'lightblue',
     'Bootstrap': 'gray',
@@ -57,7 +57,7 @@ const ProjectGrid = () => {
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="badge rounded-pill me-2 fs-6 text-dark"
+                      className="badge rounded-pill me-2 fs-6 text-white"
                       style={{ backgroundColor: techColors[tech] || 'gray' }}
                     >
                       {tech}

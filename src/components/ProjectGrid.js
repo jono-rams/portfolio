@@ -13,7 +13,7 @@ const ProjectGrid = () => {
       image: '/imgs/weather.png',
       title: 'Weather App',
       link: 'https://weather-js-5ae2d.firebaseapp.com/',
-      technologies: ['Vanilla JS', 'Accuweather API', 'Bootstrap']
+      technologies: ['Vanilla JS', 'Bootstrap']
     },
     {
       image: '/imgs/chat.png',
@@ -25,7 +25,7 @@ const ProjectGrid = () => {
       image: '/imgs/ui-lib.png',
       title: 'UI Library',
       link: 'https://ui-lib-4087f.firebaseapp.com/',
-      technologies: ['React', 'Babel', 'Webpack']
+      technologies: ['Vanilla JS', 'Babel', 'Webpack']
     }
   ];
 

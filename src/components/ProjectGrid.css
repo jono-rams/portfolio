@@ -1,9 +1,9 @@
-.card-img-top {
+.proj-grid .card-img-top {
   width: 100%; 
   position: relative; /* To position the image absolutely within the container */
 }
 
-.card-img-top img {
+.proj-grid .card-img-top img {
   position: absolute;
   top: 0;
   left: 0;
@@ -12,30 +12,46 @@
   object-fit: cover; 
 }
 
-.card {
+.proj-grid .card {
   background-color: #222; /* Dark background */
   border: 1px solid #777;
 }
 
-.card-body {
+.proj-grid .card-body {
   height: 80px;
   align-content: center;
+  border-bottom: 1px solid #777;
 }
 
-.card-footer {
+.proj-grid .card-footer {
   height: 80px; 
   align-content: space-around;
   align-items: center;
 }
-.card-footer span {
+.proj-grid .card-footer span {
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
 }
 
-.card a{
+.proj-grid .card a{
   color: #c739ff;
   text-decoration-color: #c739ff;
 }
 
-.card-title {
+.proj-grid .card-title {
   letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+  .proj-grid .card-footer {
+    height: 100px;
+  }
+}
+
+@media (max-width: 512px) {
+  .proj-grid .card-footer {
+    height: 125px;
+  }
+  .proj-grid .card-footer span {
+    font-size: 0.65em !important;
+  }
 }

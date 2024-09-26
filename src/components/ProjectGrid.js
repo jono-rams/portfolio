@@ -43,7 +43,7 @@ const ProjectGrid = () => {
   };
 
   return (
-    <div className="container text-center">
+    <div className="proj-grid container text-center">
       <div className="row row-cols-2">
         {projects.map((project) => (
           <div className="col mb-4" key={project.title}>

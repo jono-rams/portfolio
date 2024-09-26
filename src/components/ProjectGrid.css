@@ -39,3 +39,18 @@
 .card-title {
   letter-spacing: 2px;
 }
+
+@media (max-width: 768px) {
+  .card-footer {
+    height: 100px;
+  }
+}
+
+@media (max-width: 512px) {
+  .card-footer {
+    height: 125px;
+  }
+  .card-footer span {
+    font-size: 0.65em !important;
+  }
+}

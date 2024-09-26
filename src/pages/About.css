@@ -1,0 +1,43 @@
+header {
+  color: #e5e5e5;
+}
+main h2 {
+  color: #e5e5e5;
+}
+main h3 {
+  color: #e5e5e5;
+}
+
+a {
+  text-decoration: none;
+}
+
+.catch {
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.projs .card {
+  background-color: #222;
+  /* Dark background */
+  border: 1px solid #777;
+  color: #eee;
+}
+
+@media (min-width: 769px) {
+  .tools ul {
+    list-style: none;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .languages div {
+    display: block !important;
+  }
+
+  .frameworks div {
+    display: block !important;
+  }
+}

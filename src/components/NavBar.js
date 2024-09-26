@@ -10,8 +10,8 @@ const NavBar = () => {
     <div>
       <header>
         <Navbar bg="dark" variant="dark" expand="lg">
-          <Container>
-            <Navbar.Brand className='me-auto'>Jonathan Rampersad's Portfolio</Navbar.Brand>
+          <Container className='text-center'>
+            <Navbar.Brand className='me-auto'><NavLink className="nav-brand" to='/'>Jonathan Rampersad's Portfolio</NavLink></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" className='ms-auto' />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="ms-auto">

@@ -4,6 +4,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { Link, NavLink, Outlet } from 'react-router-dom';
 
 import './NavBar.css';
+import Footer from './Footer';
 
 const NavBar = () => {
   return (
@@ -32,6 +33,7 @@ const NavBar = () => {
       <main>
         <Outlet />
       </main>
+      <Footer />
     </div>
   );
 };

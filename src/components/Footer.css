@@ -1,0 +1,22 @@
+.footer {
+  max-width: 100%;
+  background: rgba(10, 10, 10, 0.5);
+}
+
+@media (max-width: 1122px) {
+  .footer {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 808px) {
+  .footer {
+    font-size: 0.5em;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    text-align: center;
+  }
+}

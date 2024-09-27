@@ -1,3 +1,8 @@
+.proj-grid {
+  max-width: 975px;
+  margin: 40px auto;
+}
+
 .proj-grid .card-img-top {
   width: 100%; 
   position: relative; /* To position the image absolutely within the container */

@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+.about-me {
+  margin: 40px auto;
+}
+
 .catch {
   font-size: 24px;
   font-weight: bold;

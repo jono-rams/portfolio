@@ -6,25 +6,25 @@ const ProjectGrid = () => {
     {
       image: '/imgs/memory.png',
       title: 'Memory Matching Game',
-      link: 'https://magic-memory-41d0a.firebaseapp.com/',
+      link: 'https://mm.jono-rams.work/',
       technologies: ['React', 'Node.js']
     },
     {
       image: '/imgs/weather.png',
       title: 'Weather App',
-      link: 'https://weather-js-5ae2d.firebaseapp.com/',
+      link: 'https://weather.jono-rams.work/',
       technologies: ['Vanilla JS', 'Bootstrap']
     },
     {
       image: '/imgs/chat.png',
       title: 'Chat Room',
-      link: 'https://rt-chatroom-js.firebaseapp.com/',
+      link: 'https://chat.jono-rams.work/',
       technologies: ['Vanilla JS', 'Firebase', 'Bootstrap']
     },
     {
       image: '/imgs/ui-lib.png',
       title: 'UI Library',
-      link: 'https://ui-lib-4087f.firebaseapp.com/',
+      link: 'https://ui-lib.jono-rams.work/',
       technologies: ['Vanilla JS', 'Babel', 'Webpack']
     }
   ];

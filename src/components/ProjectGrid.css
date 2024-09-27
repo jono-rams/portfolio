@@ -48,10 +48,19 @@
 }
 
 @media (max-width: 512px) {
+  .proj-grid .card-title {
+    font-size: 0.7em;
+  }
   .proj-grid .card-footer {
     height: 125px;
   }
   .proj-grid .card-footer span {
     font-size: 0.65em !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .proj-grid .card-title {
+    font-size: 0.57em;
   }
 }

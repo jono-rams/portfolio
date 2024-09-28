@@ -19,7 +19,7 @@
       ]
     },
     {
-      "target": "weather",
+      "target": "weather-jr",
       "public": "weather/build",
       "ignore": [
         "firebase.json",

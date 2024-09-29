@@ -7,7 +7,7 @@ const ProjectGrid = () => {
       image: '/imgs/memory.png',
       title: 'Memory Matching Game',
       link: 'https://mm.jono-rams.work/',
-      technologies: ['React', 'Node.js']
+      technologies: ['React']
     },
     {
       image: '/imgs/weather.png',
@@ -26,6 +26,12 @@ const ProjectGrid = () => {
       title: 'UI Library',
       link: 'https://ui-lib.jono-rams.work/',
       technologies: ['Vanilla JS', 'Babel', 'Webpack']
+    },
+    {
+      image: '/imgs/recipe.png',
+      title: 'Recipe Directory',
+      link: 'https://recipe.jono-rams.work/',
+      technologies: ['React', 'Firebase']
     }
   ];
 
@@ -44,6 +50,10 @@ const ProjectGrid = () => {
 
   return (
     <div className="proj-grid container text-center">
+      <header>
+        <h1 className='pb-3'>My Websites</h1>
+      </header>
+
       <div className="row row-cols-2">
         {projects.map((project) => (
           <div className="col mb-4" key={project.title}>

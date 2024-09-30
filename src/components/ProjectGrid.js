@@ -1,52 +1,45 @@
+import { useEffect, useState } from 'react';
+import { firebaseStorage, firestoreDatabase } from '../firebase/config';
+import { collection, onSnapshot } from 'firebase/firestore';
+import { getDownloadURL, ref } from 'firebase/storage';
+
 import './ProjectGrid.css';
+
+const techColors = {
+  'React': '#00bbbb',
+  'Node.js': 'green',
+  'Express': 'orange',
+  'MongoDB': 'darkgreen',
+  'Firebase': '#dddd00',
+  'Vanilla JS': 'purple',
+  'Webpack': 'lightblue',
+  'Bootstrap': 'gray',
+  'Babel': 'lightgray'
+  // ... add more colors for other technologies
+};
 
 const ProjectGrid = () => {
 
-  const projects = [
-    {
-      image: '/imgs/memory.png',
-      title: 'Memory Matching Game',
-      link: 'https://mm.jono-rams.work/',
-      technologies: ['React']
-    },
-    {
-      image: '/imgs/weather.png',
-      title: 'Weather App',
-      link: 'https://weather.jono-rams.work/',
-      technologies: ['Vanilla JS', 'Bootstrap']
-    },
-    {
-      image: '/imgs/chat.png',
-      title: 'Chat Room',
-      link: 'https://chat.jono-rams.work/',
-      technologies: ['Vanilla JS', 'Firebase', 'Bootstrap']
-    },
-    {
-      image: '/imgs/ui-lib.png',
-      title: 'UI Library',
-      link: 'https://ui-lib.jono-rams.work/',
-      technologies: ['Vanilla JS', 'Babel', 'Webpack']
-    },
-    {
-      image: '/imgs/recipe.png',
-      title: 'Recipe Directory',
-      link: 'https://recipe.jono-rams.work/',
-      technologies: ['React', 'Firebase']
-    }
-  ];
+  const [projects, setProjects] = useState(null);
 
-  const techColors = {
-    'React': '#00bbbb',
-    'Node.js': 'green',
-    'Express': 'orange',
-    'MongoDB': 'darkgreen',
-    'Firebase': '#dddd00',
-    'Vanilla JS': 'purple',
-    'Webpack': 'lightblue',
-    'Bootstrap': 'gray',
-    'Babel': 'lightgray'
-    // ... add more colors for other technologies
-  };
+  useEffect(() => {
+    onSnapshot(collection(firestoreDatabase, 'sites'), (snapshot) => {
+      const projs = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      
+      Promise.all(projs.map(p => {
+        const iRef = ref(firebaseStorage, p.image);
+        return getDownloadURL(iRef).then((url) => ({
+          ...p,
+          image:url
+        }));
+      })).then(updatedProjs => {
+        setProjects(updatedProjs);
+      });
+    });
+  }, [])
 
   return (
     <div className="proj-grid container text-center">
@@ -55,7 +48,7 @@ const ProjectGrid = () => {
       </header>
 
       <div className="row row-cols-2">
-        {projects.map((project) => (
+        {projects && projects.map((project) => (
           <div className="col mb-4" key={project.title}>
             <div className="card">
               <a href={project.link} target="_blank" rel="noopener noreferrer">

@@ -11,12 +11,12 @@ export default function Footer() {
       <Container className='footer'>
         <Row className="align-items-center">
           <Col xs={12} md={6}>
-            <p className="text-light mb-0 ms-1 powered">
-              Powered by React, Bootstrap, and React Router
+            <p className="text-light mt-1 mb-0 ms-1 powered">
+              Powered by React, React Router, Bootstrap, and Firebase
             </p>
           </Col>
           <Col xs={12} md={6} className="text-md-end">
-            <p className="text-light mb-0 me-1">
+            <p className="text-light mt-1 mb-0 me-1">
               Icons made by{' '}
               <Link to="https://fontawesome.com/" target="_blank">
                 Font Awesome

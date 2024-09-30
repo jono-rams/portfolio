@@ -62,9 +62,9 @@ export default function About() {
             <h3 className="py-2 text-center"> Tools & Technologies</h3>
             <ul>
               <li className="my-2">IDEs: VS Code, Visual Studio, PyCharm, Android Studio</li>
-              <li className="my-2">Version Control: Git with GitHub (Actions & Rulesets)</li>
+              <li className="my-2">Version Control: Git with GitHub (CI/CD with GitHub Actions)</li>
               <li className="my-2">Front-End Development: Bootstrap, Babel, Webpack</li>
-              <li className="my-2">Backend as a Service: Firebase (Firestore, Auth, Hosting)</li>
+              <li className="my-2">Backend as a Service: Firebase (Firestore, Auth, Hosting, Storage)</li>
             </ul>
           </div>
         </section>

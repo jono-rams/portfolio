@@ -47,6 +47,8 @@ const ProjectGrid = () => {
         <h1 className='pb-3'>My Websites</h1>
       </header>
 
+      {!projects && <div className='text-center'>Loading website details...</div>}
+
       <div className="row row-cols-2">
         {projects && projects.map((project) => (
           <div className="col mb-4" key={project.title}>

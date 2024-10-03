@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
-import { firebaseStorage, firestoreDatabase } from '../firebase/config';
+import { analytics, firebaseStorage, firestoreDatabase } from '../firebase/config';
 import { collection, onSnapshot } from 'firebase/firestore';
 import { getDownloadURL, ref } from 'firebase/storage';
 
 import './ProjectGrid.css';
+import { logEvent } from 'firebase/analytics';
 
 const techColors = {
   'React': '#00bbbb',
@@ -41,6 +42,12 @@ const ProjectGrid = () => {
     });
   }, [])
 
+  const handleThumbnailClick = (projectName) => {
+    logEvent(analytics, 'thumbnail_click', {
+      project_name: projectName,
+    });
+  }
+
   return (
     <div className="proj-grid container text-center">
       <header>
@@ -53,7 +60,7 @@ const ProjectGrid = () => {
         {projects && projects.map((project) => (
           <div className="col mb-4" key={project.title}>
             <div className="card">
-              <a href={project.link} target="_blank" rel="noopener noreferrer">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" onClick={() => handleThumbnailClick(project.title)}>
                 <img src={project.image} className="card-img-top" alt={project.title} />
                 <div className="card-body">
                   <h5 className="card-title">{project.title}</h5>

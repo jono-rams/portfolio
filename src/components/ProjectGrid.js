@@ -43,9 +43,11 @@ const ProjectGrid = () => {
   }, [])
 
   const handleThumbnailClick = (projectName) => {
-    logEvent(analytics, 'thumbnail_click', {
-      project_name: projectName
-    })
+    if (analytics) {
+      logEvent(analytics, 'thumbnail_click', {
+        project_name: projectName
+      })
+    }
   }
 
   return (

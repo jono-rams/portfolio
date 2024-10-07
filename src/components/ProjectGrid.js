@@ -29,25 +29,25 @@ const ProjectGrid = () => {
         id: doc.id,
         ...doc.data()
       }));
-      
+
       Promise.all(projs.map(p => {
         const iRef = ref(firebaseStorage, p.image);
         return getDownloadURL(iRef).then((url) => ({
           ...p,
-          image:url
+          image: url
         }));
       })).then(updatedProjs => {
         setProjects(updatedProjs);
       });
     });
-  }, [])
+  }, []);
 
   const handleThumbnailClick = (projectName) => {
     logEvent(analytics, 'select_content', {
       content_type: 'project_thumbnail',
       item_id: projectName
     });
-  }
+  };
 
   return (
     <div className="proj-grid container text-center">

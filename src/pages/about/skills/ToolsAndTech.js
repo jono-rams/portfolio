@@ -40,6 +40,14 @@ export default function ToolsAndTech() {
             including Firebase Hosting, Cloudflare Workers, and Vercel.
           </p>
         </div>
+        <div className="skill-tile">
+          <h3>Cloudflare</h3>
+          <p>
+            Experienced with Cloudflare's ecosystem, including Workers for
+            serverless functions, Wrangler for deployment, and Domain/DNS
+            management for website configuration and optimization.
+          </p>
+        </div>
       </div>
     </div>
   );

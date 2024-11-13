@@ -1,9 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap");
+
+/* base styles */
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  font-size: 1.5em;
+  background: #1b1523;
+  color: #fff;
+}
+
+/* about page specific styles */
 header {
   color: #e5e5e5;
 }
+
 main h2 {
   color: #e5e5e5;
 }
+
 main h3 {
   color: #e5e5e5;
 }
@@ -24,24 +38,72 @@ a {
 
 .projs .card {
   background-color: #222;
-  /* Dark background */
-  border: 1px solid #777;
+  border: none;
+  color: #eee;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.projs .card:hover {
+  transform: translateY(-2px);
+}
+
+.projs .card .card-title {
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1.2em;
+}
+
+/* Grid layout for skills */
+.skills-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-category h3 {
+  text-align: center;
   color: #eee;
 }
 
-@media (min-width: 769px) {
-  .tools ul {
-    list-style: none;
-    text-align: center;
-  }
+.skill-tiles {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-@media (max-width: 768px) {
-  .languages div {
-    display: block !important;
-  }
+.skill-tile {
+  border: none;
+  padding: 20px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: #282c34;
+  color: #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  font-size: 1.1rem;
+  width: 100%;
+}
 
-  .frameworks div {
-    display: block !important;
-  }
+.skill-tile:hover {
+  transform: translateY(-2px);
+}
+
+.skill-tile p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.skill-tile h3 {
+  text-align: center;
+  font-family: Georgia, serif;
+  font-weight: bold;
 }

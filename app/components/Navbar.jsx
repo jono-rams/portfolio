@@ -64,7 +64,7 @@ export default function Navbar() {
             About
           </Link>
           <a
-            href="https://github.com/your-github-profile"
+            href="https://github.com/jono-rams"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white hover:text-gray-300"
@@ -73,7 +73,7 @@ export default function Navbar() {
             <span>GitHub</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/your-linkedin-profile"
+            href="https://www.linkedin.com/in/jonathan-rampersad-47458a1a0/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white hover:text-gray-300"

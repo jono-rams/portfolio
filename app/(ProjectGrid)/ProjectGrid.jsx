@@ -1,13 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { firestoreDatabase, firebaseStorage, analytics } from "../../utils/firebase/firebase"; 
+import { firestoreDatabase, firebaseStorage } from "../../utils/firebase/firebase"; 
 
 import { collection, onSnapshot } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 
 import "./ProjectGrid.css";
-import { logEvent } from "firebase/analytics";
 
 const techColors = {
   React: "#00bbbb",
@@ -45,13 +44,6 @@ const ProjectGrid = () => {
       });
     });
   }, []);
-
-  const handleThumbnailClick = (projectName) => {
-    logEvent(analytics, "select_content", {
-      content_type: "project_thumbnail",
-      item_id: projectName,
-    });
-  };
 
   return (
     <div className="container text-center proj-grid">

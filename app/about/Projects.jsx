@@ -1,12 +1,10 @@
-import { Link } from "react-router-dom";
-
 export default function Projects() {
   return (
     <section id="projects" className="mb-4 projs">
-      <h2 className="text-center py-3">Project Highlights</h2>
+      <h2 className="py-3 text-center">Project Highlights</h2>
       <div>
         <article className="mb-3">
-          <Link to="https://github.com/jono-rams/rt-chatroom" target="_blank">
+          <a href="https://github.com/jono-rams/rt-chatroom" target="_blank">
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">
@@ -20,12 +18,12 @@ export default function Projects() {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </article>
 
         <article className="mb-3">
-          <Link
-            to="https://github.com/jono-rams/Taxi-Booking-System"
+          <a
+            href="https://github.com/jono-rams/Taxi-Booking-System"
             target="_blank"
           >
             <div className="card">
@@ -41,11 +39,11 @@ export default function Projects() {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </article>
 
         <article className="mb-3">
-          <Link to="https://github.com/jono-rams/weather-js" target="_blank">
+          <a href="https://github.com/jono-rams/weather-js" target="_blank">
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">
@@ -54,15 +52,15 @@ export default function Projects() {
                 <p className="card-text">
                   Created a user-friendly website that provides current weather
                   conditions for any city, styled with Bootstrap and utilizing
-                  AccuWeather's API for accurate and up-to-date data.
+                  AccuWeather&#39;s API for accurate and up-to-date data.
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </article>
 
         <article className="mb-3">
-          <Link to="https://github.com/jono-rams/magic-memory" target="_blank">
+          <a href="https://github.com/jono-rams/magic-memory" target="_blank">
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">Memory Match Game (React)</h3>
@@ -73,11 +71,11 @@ export default function Projects() {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </article>
 
         <article className="mb-3">
-          <Link to="https://github.com/jono-rams/Enigma" target="_blank">
+          <a href="https://github.com/jono-rams/Enigma" target="_blank">
             <div className="card">
               <div className="card-body">
                 <h3 className="card-title">Enigma Machine Recreation (C++)</h3>
@@ -88,7 +86,7 @@ export default function Projects() {
                 </p>
               </div>
             </div>
-          </Link>
+          </a>
         </article>
       </div>
     </section>

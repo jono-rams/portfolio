@@ -1,14 +1,12 @@
+"use client";
+
 import { useEffect, useState } from "react";
-import {
-  analytics,
-  firebaseStorage,
-  firestoreDatabase,
-} from "../firebase/config";
+import { firestoreDatabase, firebaseStorage } from "../../utils/firebase/firebase"; 
+
 import { collection, onSnapshot } from "firebase/firestore";
 import { getDownloadURL, ref } from "firebase/storage";
 
 import "./ProjectGrid.css";
-import { logEvent } from "firebase/analytics";
 
 const techColors = {
   React: "#00bbbb",
@@ -47,15 +45,8 @@ const ProjectGrid = () => {
     });
   }, []);
 
-  const handleThumbnailClick = (projectName) => {
-    logEvent(analytics, "select_content", {
-      content_type: "project_thumbnail",
-      item_id: projectName,
-    });
-  };
-
   return (
-    <div className="proj-grid container text-center">
+    <div className="container text-center proj-grid">
       <header>
         <h1 className="pb-3">My Websites</h1>
       </header>
@@ -68,7 +59,7 @@ const ProjectGrid = () => {
         <div className="row row-cols-2">
           {projects &&
             projects.map((project) => (
-              <div className="col mb-4" key={project.title}>
+              <div className="mb-4 col" key={project.title}>
                 <div className="card">
                   <a
                     href={project.link}
@@ -88,7 +79,7 @@ const ProjectGrid = () => {
                       {project.technologies.map((tech) => (
                         <span
                           key={tech}
-                          className="badge rounded-pill me-2 fs-6 text-white"
+                          className="text-white badge rounded-pill me-2 fs-6"
                           style={{
                             backgroundColor: techColors[tech] || "gray",
                           }}

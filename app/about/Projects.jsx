@@ -52,7 +52,7 @@ export default function Projects() {
                 <p className="card-text">
                   Created a user-friendly website that provides current weather
                   conditions for any city, styled with Bootstrap and utilizing
-                  AccuWeather's API for accurate and up-to-date data.
+                  AccuWeather&aposs API for accurate and up-to-date data.
                 </p>
               </div>
             </div>

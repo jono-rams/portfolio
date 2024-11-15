@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="container flex flex-col items-center px-4 mx-auto md:flex-row md:justify-between">
         <div>
           <Link href="/" className="text-2xl font-bold text-white" onClick={closeMenu}>
-            Jonathan Rampersad's Portfolio
+            Jonathan Rampersad&aposs Portfolio
           </Link>
           <button
             className="text-white md:hidden focus:outline-none ms-4"

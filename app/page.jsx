@@ -1,5 +1,5 @@
+import ProjectGrid from "./(ProjectGrid)/ProjectGrid";
+
 export default function page() {
-  return (
-    <div></div>
-  )
+  return <ProjectGrid />;
 }

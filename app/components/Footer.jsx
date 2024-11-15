@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 w-full py-4 bg-gray-900">
+    <footer className="bottom-0 w-full py-4 bg-gray-900">
       <div className="container px-4 mx-auto sm:px-6">
         <div className="flex flex-col items-center justify-between sm:flex-row">
           <div className="mb-2 text-white sm:mb-0">

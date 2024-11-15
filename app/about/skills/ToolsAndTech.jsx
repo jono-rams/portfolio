@@ -43,7 +43,7 @@ export default function ToolsAndTech() {
         <div className="skill-tile">
           <h3>Cloudflare</h3>
           <p>
-            Experienced with Cloudflare&aposs ecosystem, including Workers for
+            Experienced with Cloudflare&#39;s ecosystem, including Workers for
             serverless functions, Wrangler for deployment, and Domain/DNS
             management for website configuration and optimization.
           </p>

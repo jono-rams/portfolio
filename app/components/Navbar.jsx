@@ -51,14 +51,14 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="block text-white hover:text-gray-300"
+            className="block text-center text-white hover:text-gray-300 md:text-left"
             onClick={closeMenu}
           >
             Home
           </Link>
           <Link
             href="/about"
-            className="block text-white hover:text-gray-300"
+            className="block text-center text-white hover:text-gray-300 md:text-left"
             onClick={closeMenu}
           >
             About
@@ -67,7 +67,7 @@ export default function Navbar() {
             href="https://github.com/jono-rams"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-white hover:text-gray-300"
+            className="flex items-center justify-center w-full text-white hover:text-gray-300 md:justify-start" 
           >
             <FontAwesomeIcon icon={faGithub} className="mr-2" />
             <span>GitHub</span>
@@ -76,7 +76,7 @@ export default function Navbar() {
             href="https://www.linkedin.com/in/jonathan-rampersad-47458a1a0/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center text-white hover:text-gray-300"
+            className="flex items-center justify-center w-full text-white hover:text-gray-300 md:justify-start" 
           >
             <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
             <span>LinkedIn</span>

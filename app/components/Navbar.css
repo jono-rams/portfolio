@@ -1,0 +1,18 @@
+@media (max-width: 481px) {
+  .logo {
+    font-size: 1.22rem;
+    align-items: center;
+  }
+}
+
+@media (max-width: 412px) {
+  .logo {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 376px) {
+  .logo {
+    font-size: 0.75rem;
+  }
+}

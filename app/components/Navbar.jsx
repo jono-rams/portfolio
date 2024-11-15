@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import "./Navbar.css";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Navbar() {
     <nav className="py-4 bg-gray-800">
       <div className="container flex flex-col items-center px-4 mx-auto md:flex-row md:justify-between">
         <div>
-          <Link href="/" className="text-2xl font-bold text-white" onClick={closeMenu}>
+          <Link href="/" className="font-bold text-white logo md:text-2xl" onClick={closeMenu}>
             Jonathan Rampersad&#39;s Portfolio
           </Link>
           <button
@@ -28,7 +29,7 @@ export default function Navbar() {
             onClick={toggleMenu}
           >
             <svg
-              className="w-6 h-6"
+              className="w-6 h-6 three-lines"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"

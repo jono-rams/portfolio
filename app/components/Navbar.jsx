@@ -48,7 +48,7 @@ export default function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto mt-4 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6`}
+          } w-full md:flex md:w-auto sm:mt-3 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6`}
         >
           <Link
             href="/"
@@ -70,8 +70,8 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full text-white hover:text-gray-300 md:justify-start" 
           >
+            <FontAwesomeIcon icon={faGithub} className="mr-2" />
             <span>GitHub</span>
-            <FontAwesomeIcon icon={faGithub} className="ml-2" />
           </a>
           <a
             href="https://www.linkedin.com/in/jonathan-rampersad-47458a1a0/"
@@ -79,8 +79,8 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="flex items-center justify-center w-full text-white hover:text-gray-300 md:justify-start" 
           >
+            <FontAwesomeIcon icon={faLinkedin} className="mr-2" />
             <span>LinkedIn</span>
-            <FontAwesomeIcon icon={faLinkedin} className="ml-2" />
           </a>
         </div>
       </div>

@@ -17,7 +17,6 @@ const ProjectImage = ({ project }) => {
         setImageSrc(imageUrl);
       } catch (error) {
         console.error("Error fetching project image:", error);
-        // Handle error (e.g., set a default image)
       }
     };
 

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
     <footer className="bottom-0 w-full py-4 bg-gray-900">
@@ -15,12 +17,14 @@ export default function Footer() {
                   className="text-white"
                   target="_blank"
                 >
-                  <img
+                  GitHub{" "}
+                  <Image
                     src="/github-logo.svg"
                     alt="GitHub"
+                    width={20}
+                    height={20}
                     className="inline-block w-6 h-6 align-middle"
-                  />{" "}
-                  GitHub
+                  />
                 </a>
               </p>
             </div>

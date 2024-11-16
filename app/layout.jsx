@@ -1,7 +1,6 @@
 import localFont from "next/font/local";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
-import "./base.css"
 import NavBar from "./components/Navbar";
 import Footer from "./components/Footer";
 

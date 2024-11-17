@@ -1,12 +1,8 @@
-"use client";
-
-import { useEffect, useState } from "react";
-import { firestoreDatabase, firebaseStorage } from "../../utils/firebase/firebase"; 
-
-import { collection, onSnapshot } from "firebase/firestore";
-import { getDownloadURL, ref } from "firebase/storage";
+import { firestoreDatabase } from "../../utils/firebase/firebase";
+import { collection, getDocs } from "firebase/firestore";
 
 import "./ProjectGrid.css";
+import ProjectImage from "./ProjectImage";
 
 const techColors = {
   React: "#00bbbb",
@@ -21,29 +17,41 @@ const techColors = {
   // ... add more colors for other technologies
 };
 
-const ProjectGrid = () => {
-  const [projects, setProjects] = useState(null);
+const CACHE_KEY = "projects";
+const CACHE_EXPIRATION = 6 * 60 * 60; // 6 hours in seconds
 
-  useEffect(() => {
-    onSnapshot(collection(firestoreDatabase, "sites"), (snapshot) => {
-      const projs = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
+const fetcher = async () => {
+  const snapshot = await getDocs(collection(firestoreDatabase, "sites"));
+  const projects = snapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }));
+  return projects;
+};
 
-      Promise.all(
-        projs.map((p) => {
-          const iRef = ref(firebaseStorage, p.image);
-          return getDownloadURL(iRef).then((url) => ({
-            ...p,
-            image: url,
-          }));
-        })
-      ).then((updatedProjs) => {
-        setProjects(updatedProjs);
-      });
-    });
-  }, []);
+export default async function ProjectGrid() {
+  let projects = null;
+
+  try {
+    const cachedProjects = globalThis.cache?.get(CACHE_KEY);
+    const cacheTimestamp = globalThis.cache?.get(`${CACHE_KEY}_timestamp`);
+
+    if (
+      cachedProjects &&
+      cacheTimestamp &&
+      Date.now() - cacheTimestamp < CACHE_EXPIRATION * 1000
+    ) {
+      projects = cachedProjects;
+    } else {
+      projects = await fetcher();
+
+      globalThis.cache?.set(CACHE_KEY, projects);
+      globalThis.cache?.set(`${CACHE_KEY}_timestamp`, Date.now());
+    }
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return <div>Failed to load projects</div>;
+  }
 
   return (
     <div className="container text-center proj-grid">
@@ -51,51 +59,39 @@ const ProjectGrid = () => {
         <h1 className="pb-3">My Websites</h1>
       </header>
 
-      {!projects && (
-        <div className="text-center">Loading website details...</div>
-      )}
-
       <main>
         <div className="row row-cols-2">
-          {projects &&
-            projects.map((project) => (
-              <div className="mb-4 col" key={project.title}>
-                <div className="card">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => handleThumbnailClick(project.title)}
-                  >
-                    <img
-                      src={project.image}
-                      className="card-img-top"
-                      alt={project.title}
-                    />
-                    <div className="card-body">
-                      <h5 className="card-title">{project.title}</h5>
-                    </div>
-                    <div className="card-footer">
-                      {project.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-white badge rounded-pill me-2 fs-6"
-                          style={{
-                            backgroundColor: techColors[tech] || "gray",
-                          }}
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </a>
-                </div>
+          {projects.map((project) => (
+            <div className="mb-4 col" key={project.id}>
+              <div className="card">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ProjectImage project={project} />
+                  <div className="card-body">
+                    <h5 className="card-title">{project.title}</h5>
+                  </div>
+                  <div className="card-footer">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-white badge rounded-pill me-2 fs-6"
+                        style={{
+                          backgroundColor: techColors[tech] || "gray",
+                        }}
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </a>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </main>
     </div>
   );
-};
-
-export default ProjectGrid;
+}

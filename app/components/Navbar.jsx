@@ -48,7 +48,7 @@ export default function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto mt-4 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6`}
+          } w-full md:flex md:w-auto sm:mt-3 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6`}
         >
           <Link
             href="/"

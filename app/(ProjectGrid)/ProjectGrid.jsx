@@ -63,7 +63,7 @@ export default async function ProjectGrid() {
         <div className="row row-cols-2">
           {projects.map((project) => (
             <div className="mb-4 col" key={project.id}>
-              <div className="card">
+              <div className={`card ${project.type === "api" ? "api-card" : ""}`}>
                 <a
                   href={project.link}
                   target="_blank"

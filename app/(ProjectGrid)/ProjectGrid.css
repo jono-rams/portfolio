@@ -22,6 +22,24 @@
   border: 1px solid #777;
 }
 
+.api-card {
+  border: 2px solid #8a2be2 !important;
+}
+
+.api-card::before {
+  z-index: 1;
+  content: "API";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #8a2be2;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .proj-grid .card-body {
   height: 80px;
   align-content: center;

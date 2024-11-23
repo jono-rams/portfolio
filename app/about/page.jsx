@@ -12,8 +12,8 @@ export const metadata = {
 export default function About() {
   return (
     <div className="container about-me">
-      <header className="mb-4 text-center">
-        <h1 className="pb-2">About Me</h1>
+      <header className="my-3 text-center">
+        <h1 className="my-3">About Me</h1>
         <h1 className="catch">
           Problem-Solver. Quick Learner. Passionate Programmer.
         </h1>

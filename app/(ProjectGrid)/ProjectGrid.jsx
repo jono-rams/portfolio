@@ -56,14 +56,14 @@ export default async function ProjectGrid() {
   return (
     <div className="container text-center proj-grid">
       <header>
-        <h1 className="pb-3">My Websites</h1>
+        <h1 className="my-4">My Websites</h1>
       </header>
 
       <main>
         <div className="row row-cols-2">
           {projects.map((project) => (
             <div className="mb-4 col" key={project.id}>
-              <div className="card">
+              <div className={`card ${project.type === "api" ? "api-card" : ""}`}>
                 <a
                   href={project.link}
                   target="_blank"

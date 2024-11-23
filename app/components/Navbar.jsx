@@ -19,9 +19,9 @@ export default function Navbar() {
 
   return (
     <nav className="py-4 bg-gray-800">
-      <div className="container flex flex-col items-center px-4 mx-auto md:flex-row md:justify-between">
+      <div className="container flex flex-col items-center px-3 mx-auto md:flex-row md:justify-between">
         <div>
-          <Link href="/" className="font-bold text-white logo md:text-2xl" onClick={closeMenu}>
+          <Link href="/" className="font-bold text-white logo" onClick={closeMenu}>
             Jonathan Rampersad&#39;s Portfolio
           </Link>
           <button
@@ -48,7 +48,7 @@ export default function Navbar() {
         <div
           className={`${
             isOpen ? "block" : "hidden"
-          } w-full md:flex md:w-auto sm:mt-3 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6`}
+          } w-full md:flex md:w-auto sm:mt-3 md:mt-0 items-center space-y-4 md:space-y-0 md:space-x-6 nav-links`}
         >
           <Link
             href="/"
@@ -63,6 +63,13 @@ export default function Navbar() {
             onClick={closeMenu}
           >
             About
+          </Link>
+          <Link
+            href="/contact"
+            className="block text-center text-white hover:text-gray-300 md:text-left"
+            onClick={closeMenu}
+          >
+            Contact Me
           </Link>
           <a
             href="https://github.com/jono-rams"

@@ -14,7 +14,7 @@ const techColors = {
   Webpack: "lightblue",
   Bootstrap: "gray",
   Babel: "lightgray",
-  // ... add more colors for other technologies
+  Hono: "#ff6600",
 };
 
 const CACHE_KEY = "projects";

@@ -7,7 +7,7 @@ export default function page() {
     <Suspense
       fallback={<Loading />}
     >
-      <ProjectGrid />;
+      <ProjectGrid />
     </Suspense>
   );
 }

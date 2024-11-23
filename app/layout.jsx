@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/next';
 import localFont from "next/font/local";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./globals.css";
@@ -23,10 +24,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased my-app`}>
         <NavBar /> 
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

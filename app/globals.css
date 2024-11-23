@@ -5,10 +5,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800&display=swap');
 
 /* base styles */
-body {
+.my-app {
   font-family: Raleway, sans-serif;
   margin: 0;
   font-size: 1.5rem;
   background-color: #1b1523;
   color: #fff;
+}
+
+.my-app a {
+  text-decoration: none;
 }

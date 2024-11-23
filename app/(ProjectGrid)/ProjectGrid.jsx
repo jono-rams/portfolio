@@ -56,7 +56,7 @@ export default async function ProjectGrid() {
   return (
     <div className="container text-center proj-grid">
       <header>
-        <h1 className="pb-3">My Websites</h1>
+        <h1 className="my-4">My Websites</h1>
       </header>
 
       <main>

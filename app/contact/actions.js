@@ -1,8 +1,9 @@
 "use client";
 
-import { redirect } from "next/navigation";
+import { redirect } from 'next/navigation';
 
 export async function contactRequest(event) {
+  event.preventDefault();
   try{
     const formData = new FormData(event.target);
     const response = await fetch("/api/contact", {

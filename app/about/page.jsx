@@ -5,6 +5,10 @@ import Skills from "./Skills";
 import Projects from "./Projects";
 import Closing from "./Closing";
 
+export const metadata = {
+  title: "About Me",
+}
+
 export default function About() {
   return (
     <div className="container about-me">

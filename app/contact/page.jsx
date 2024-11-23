@@ -1,5 +1,9 @@
 import ContactForm from "./ContactForm";
 
+export const metadata = {
+  title: "Contact Me",
+}
+
 export default function Contact() {
   return (
     <div className="container">

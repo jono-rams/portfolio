@@ -81,3 +81,29 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+@supports (animation-timeline: view()) and (animation-range: entry 0% cover 35%) {
+  .proj-grid .card {
+    /*Appear*/
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+  }
+
+  @media (max-width: 768px) {
+    .card {
+      animation-range: entry 0% cover 25%;
+    }
+  }
+}

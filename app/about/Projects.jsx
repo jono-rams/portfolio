@@ -7,10 +7,10 @@ export default function Projects() {
           <a href="https://github.com/jono-rams/rt-chatroom" target="_blank">
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">
+                <h3 className="text-xl lg:text-3xl card-title">
                   Realtime Chatroom (JavaScript, Firebase)
                 </h3>
-                <p className="card-text">
+                <p className="text-lg lg:text-2xl card-text">
                   Developed a dynamic chat application with multiple channels,
                   allowing users to communicate in real-time. Implemented
                   Firebase Firestore for efficient chat storage and retrieval,
@@ -28,10 +28,10 @@ export default function Projects() {
           >
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">
+              <h3 className="text-xl lg:text-3xl card-title">
                   Taxi Booking System (Python, SQLite3)
                 </h3>
-                <p className="card-text">
+                <p className="text-lg lg:text-2xl card-text">
                   Built a comprehensive taxi booking platform featuring user
                   roles for customers, drivers, and administrators. Utilized
                   SQLite3 for data management and implemented user
@@ -46,10 +46,10 @@ export default function Projects() {
           <a href="https://github.com/jono-rams/weather-js" target="_blank">
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">
-                  Weather Website (JavaScript, Bootstrap, AccuWeather API)
+              <h3 className="text-xl lg:text-3xl card-title">
+                  Weather Website (JavaScript, AccuWeather API)
                 </h3>
-                <p className="card-text">
+                <p className="text-lg lg:text-2xl card-text">
                   Created a user-friendly website that provides current weather
                   conditions for any city, styled with Bootstrap and utilizing
                   AccuWeather&#39;s API for accurate and up-to-date data.
@@ -63,8 +63,10 @@ export default function Projects() {
           <a href="https://github.com/jono-rams/magic-memory" target="_blank">
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">Memory Match Game (React)</h3>
-                <p className="card-text">
+              <h3 className="text-xl lg:text-3xl card-title">
+                  Memory Match Game (React)
+                </h3>
+                <p className="text-lg lg:text-2xl card-text">
                   Designed an engaging memory match game using React, showcasing
                   my ability to create interactive and visually appealing web
                   applications.
@@ -78,8 +80,10 @@ export default function Projects() {
           <a href="https://github.com/jono-rams/wordle-api" target="_blank">
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">Wordle API (Hono)</h3>
-                <p className="card-text">
+              <h3 className="text-xl lg:text-3xl card-title">
+                  Wordle API (Hono)
+                  </h3>
+                  <p className="text-lg lg:text-2xl card-text">
                 Developed a Wordle API using Hono, deployed on Cloudflare Workers 
                 for optimal performance and scalability. 
                 This API allows developers to seamlessly integrate Wordle-like 
@@ -94,8 +98,10 @@ export default function Projects() {
           <a href="https://github.com/jono-rams/Enigma" target="_blank">
             <div className="card">
               <div className="card-body">
-                <h3 className="card-title">Enigma Machine Recreation (C++)</h3>
-                <p className="card-text">
+              <h3 className="text-xl lg:text-3xl card-title">
+                  Enigma Machine Recreation (C++)
+                  </h3>
+                  <p className="text-lg lg:text-2xl card-text">
                   Replicated the functionality of the Enigma machine,
                   demonstrating proficiency in C++ and a passion for historical
                   cryptography.

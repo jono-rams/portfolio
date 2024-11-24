@@ -1,7 +1,7 @@
 export default function Projects() {
   return (
     <section id="projects" className="mb-4 projs">
-      <h2 className="py-3 text-center">Project Highlights</h2>
+      <h2 className="py-3 text-4xl font-bold text-center">Project Highlights</h2>
       <div>
         <article className="mb-3">
           <a href="https://github.com/jono-rams/rt-chatroom" target="_blank">

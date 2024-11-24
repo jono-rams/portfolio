@@ -1,7 +1,6 @@
 export default function Databases() {
   return (
     <div className="skill-category">
-      <h3>Databases</h3>
       <div className="skill-tile">
         <h3>MongoDB</h3>
         <p>

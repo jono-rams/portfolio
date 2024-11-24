@@ -13,8 +13,8 @@ export default function About() {
   return (
     <div className="container about-me">
       <header className="my-3 text-center">
-        <h1 className="my-3">About Me</h1>
-        <h1 className="catch">
+        <h1 className="my-3 text-5xl">About Me</h1>
+        <h1 className="text-4xl catch">
           Problem-Solver. Quick Learner. Passionate Programmer.
         </h1>
       </header>

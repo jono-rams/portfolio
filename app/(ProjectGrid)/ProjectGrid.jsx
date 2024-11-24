@@ -60,7 +60,7 @@ export default async function ProjectGrid() {
       </header>
 
       <main>
-        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
           {projects.map((project) => (
             <div className="col" key={project.id}>
               <div className={`card ${project.type === "api" ? "api-card" : ""}`}>
@@ -77,7 +77,7 @@ export default async function ProjectGrid() {
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-xs text-white tech me-2 md:text-base lg:text-base"
+                        className="text-xs text-white sm:text-xs tech me-2 md:text-base lg:text-base"
                         style={{
                           backgroundColor: techColors[tech] || "gray",
                         }}

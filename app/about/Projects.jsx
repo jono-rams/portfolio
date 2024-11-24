@@ -75,6 +75,22 @@ export default function Projects() {
         </article>
 
         <article className="mb-3">
+          <a href="https://github.com/jono-rams/wordle-api" target="_blank">
+            <div className="card">
+              <div className="card-body">
+                <h3 className="card-title">Wordle API (Hono)</h3>
+                <p className="card-text">
+                Developed a Wordle API using Hono, deployed on Cloudflare Workers 
+                for optimal performance and scalability. 
+                This API allows developers to seamlessly integrate Wordle-like 
+                functionality into their applications.
+                </p>
+              </div>
+            </div>
+          </a>
+        </article>
+
+        <article className="mb-3">
           <a href="https://github.com/jono-rams/Enigma" target="_blank">
             <div className="card">
               <div className="card-body">

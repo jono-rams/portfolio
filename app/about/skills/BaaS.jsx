@@ -1,7 +1,6 @@
 export default function BaaS() {
   return (
     <div className="skill-category">
-      <h3>BaaS (Backend as a Service)</h3>
       <div className="skill-tile">
         <h3>Firebase</h3>
         <p>

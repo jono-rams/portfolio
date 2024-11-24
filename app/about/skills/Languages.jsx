@@ -1,7 +1,6 @@
 export default function Languages() {
   return (
     <div className="skill-category">
-      <h3>Languages</h3>
       <div className="skill-tile">
         <h3>C/C++</h3>
         <p>

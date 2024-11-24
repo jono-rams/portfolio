@@ -1,5 +1,4 @@
 .proj-grid {
-  max-width: 975px;
   margin: 40px auto;
 }
 
@@ -40,6 +39,19 @@
   font-weight: bold;
 }
 
+.tech {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 50rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
 .proj-grid .card-body {
   height: 80px;
   align-content: center;
@@ -70,10 +82,7 @@
   }
 }
 
-@media (max-width: 512px) {
-  .proj-grid .card-title {
-    font-size: 0.7em;
-  }
+@media (max-width: 570px) {
   .proj-grid .card-footer {
     height: 125px;
   }
@@ -82,8 +91,8 @@
   }
 }
 
-@media (max-width: 400px) {
-  .proj-grid .card-title {
-    font-size: 0.57em;
+@media (min-width: 640px) {
+  .tech {
+    
   }
 }

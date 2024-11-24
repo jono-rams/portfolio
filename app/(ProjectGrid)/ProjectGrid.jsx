@@ -54,15 +54,15 @@ export default async function ProjectGrid() {
   }
 
   return (
-    <div className="container text-center proj-grid">
+    <div className="container max-w-screen-sm text-center proj-grid md:max-w-screen-lg lg:max-w-screen-2xl">
       <header>
         <h1 className="my-4">My Websites</h1>
       </header>
 
       <main>
-        <div className="row row-cols-2">
+        <div className="grid grid-cols-2 gap-4 lg:grid-cols-3">
           {projects.map((project) => (
-            <div className="mb-4 col" key={project.id}>
+            <div className="col" key={project.id}>
               <div className={`card ${project.type === "api" ? "api-card" : ""}`}>
                 <a
                   href={project.link}
@@ -71,13 +71,13 @@ export default async function ProjectGrid() {
                 >
                   <ProjectImage project={project} />
                   <div className="card-body">
-                    <h5 className="card-title">{project.title}</h5>
+                    <h5 className="text-sm card-title lg:text-2xl sm:text-base">{project.title}</h5>
                   </div>
                   <div className="card-footer">
                     {project.technologies.map((tech) => (
                       <span
                         key={tech}
-                        className="text-white badge rounded-pill me-2 fs-6"
+                        className="text-xs text-white sm:text-xs tech me-2 md:text-base lg:text-base"
                         style={{
                           backgroundColor: techColors[tech] || "gray",
                         }}

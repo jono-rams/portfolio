@@ -103,7 +103,7 @@
 
   @media (max-width: 768px) {
     .card {
-      animation-range: entry 0% cover 20%;
+      animation-range: entry 0% cover 25%;
     }
   }
 }

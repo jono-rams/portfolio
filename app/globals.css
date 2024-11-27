@@ -94,7 +94,7 @@
 }
 
 @supports (animation-timeline: view()) and (animation-range: entry 0% cover 35%) {
-  @media (min-width: 640px) {
+  @media (min-width: 640px) and (hover: hover) and (pointer: fine) {
     .proj-grid .card {
       /*Appear*/
       animation: appear linear;

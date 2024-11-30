@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Projects() {
   return (
     <section id="projects" className="mb-4 projs">
@@ -19,6 +21,13 @@ export default function Projects() {
                   ensuring seamless user interactions.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>
@@ -40,6 +49,13 @@ export default function Projects() {
                   authentication and booking functionalities.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>
@@ -57,6 +73,13 @@ export default function Projects() {
                   AccuWeather&#39;s API for accurate and up-to-date data.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>
@@ -74,6 +97,13 @@ export default function Projects() {
                   applications.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>
@@ -92,6 +122,13 @@ export default function Projects() {
                   functionality into their applications.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>
@@ -109,6 +146,13 @@ export default function Projects() {
                   cryptography.
                 </p>
               </fieldset>
+              <Image 
+                className="external-link-icon" 
+                src="/external-link.svg" 
+                alt="External Link" 
+                width={24} 
+                height={24}
+              />
             </div>
           </a>
         </article>

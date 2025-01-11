@@ -1,7 +1,7 @@
 export async function siteClicked(project) {
   try {
     const { id, title, link } = project;
-    const response = await fetch("analytics.jono-rams.work/api/analytics", {
+    const response = await fetch("https://analytics.jono-rams.work/api/analytics", {
       method: "POST",
       body: JSON.stringify({
         "site": {

@@ -19,7 +19,7 @@ const techColors = {
 
 export default function ProjectCard({project}) {
   const handleProjectClick = () => {
-    trackProjectClick(project.title);
+    trackProjectClick(project.title, project.id);
     siteClicked(project);
   };
   

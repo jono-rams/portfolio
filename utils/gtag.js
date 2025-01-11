@@ -18,11 +18,11 @@ export const event = ({ action, category, label, value }) => {
   });
 };
 
-export const trackProjectClick = (projectTitle) => {
+export const trackProjectClick = (projectTitle, projectID) => {
   event({
-    action: 'click',
-    category: 'project',
+    action: 'view_project',
+    category: 'website',
     label: projectTitle,
-    value: 1,
+    value: projectID,
   });
 };

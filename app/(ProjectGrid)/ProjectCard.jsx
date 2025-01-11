@@ -1,5 +1,6 @@
 "use client"
 
+import { trackProjectClick } from "@/utils/gtag";
 import { siteClicked } from "./actions";
 import ProjectImage from "./ProjectImage";
 
@@ -17,6 +18,11 @@ const techColors = {
 };
 
 export default function ProjectCard({project}) {
+  const handleProjectClick = () => {
+    trackProjectClick(project.title);
+    siteClicked(project);
+  };
+  
   return (
     <div className="col" key={project.id}>
       <div className={`card ${project.type === "api" ? "api-card" : ""}`}>
@@ -24,7 +30,7 @@ export default function ProjectCard({project}) {
           href={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          onClick={() => siteClicked(project)}
+          onClick={handleProjectClick}
         >
           <ProjectImage project={project} />
           <div className="card-body">

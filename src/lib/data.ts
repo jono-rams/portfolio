@@ -1,6 +1,6 @@
 import { doc, getDoc } from 'firebase/firestore';
 import { firestoreDatabase } from './firebase';
-import type { HomePageContent } from './types';
+import type { HomePageContent, SkillsContent, Skill } from './types';
 
 export async function getHomePageContent(): Promise<HomePageContent> {
   // Create a reference to the specific document we want
@@ -33,5 +33,24 @@ export async function getHomePageContent(): Promise<HomePageContent> {
           strong background in DevOps, Linux, and containerization using Docker.  Passionate about leveraging innovative solutions
           to streamline processes and drive technology advancements.`,
     };
+  }
+}
+
+export async function getSkills(): Promise<Skill[]> {
+  const docRef = doc(firestoreDatabase, 'content', 'skills');
+
+  try {
+    const docSnap = await getDoc(docRef);
+
+    if (docSnap.exists()) {
+      const data = docSnap.data() as SkillsContent;
+      return data.items.filter(skill => skill.visible);
+    } else {
+      console.warn("Skills content not found in Firestore, returning empty array.");
+      return [];
+    }
+  } catch (error) {
+    console.error("Error fetching skills content:", error);
+    return [];
   }
 }

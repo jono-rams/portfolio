@@ -32,3 +32,9 @@ export type AboutPageContent = {
   bio: string[];
   skills: Record<string, string[]>;
 };
+
+export type ContactPageContent = {
+  githubUrl: string;
+  linkedinUrl: string;
+  email: string;
+};

@@ -8,9 +8,10 @@ import {siteClicked} from '@/lib/analytics'
 
 type ProjectCardProps = {
     project: Project;
+    isPriority?: boolean;
 };
 
-const ProjectCard = ({ project }: ProjectCardProps) => {
+const ProjectCard = ({ project, isPriority = false }: ProjectCardProps) => {
     const liveLinkText = project.category === 'Python' ? 'Package Site' : 'Live Site';
 
     const handleLinkClick = () => {
@@ -28,6 +29,8 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
                             alt={`${project.title} screenshot`}
                             fill
                             className="object-cover transition-transform duration-500 group-hover:scale-110"
+                            priority={isPriority}
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                     ) : (
                         <div className="flex items-center justify-center h-full text-text-secondary">

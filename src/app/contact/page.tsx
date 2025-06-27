@@ -31,11 +31,11 @@ export default async function ContactPage() {
             <Mail size={24} className="text-accent" />
             <span>{content.email}</span>
           </a>
-          <a href={content.linkedinUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg p-4 rounded-md hover:bg-surface transition-colors">
+          <a href={`${content.linkedinUrl}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg p-4 rounded-md hover:bg-surface transition-colors">
             <Linkedin size={24} className="text-accent" />
             <span>LinkedIn</span>
           </a>
-          <a href={content.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg p-4 rounded-md hover:bg-surface transition-colors">
+          <a href={`${content.githubUrl}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 text-lg p-4 rounded-md hover:bg-surface transition-colors">
             <Github size={24} className="text-accent" />
             <span>GitHub</span>
           </a>

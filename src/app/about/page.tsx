@@ -33,6 +33,7 @@ export default async function AboutPage() {
                 alt="Photograph of Jonathan Rampersad"
                 fill
                 className="object-cover"
+                priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
               />
             </div>

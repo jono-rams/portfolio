@@ -26,3 +26,9 @@ export type Project = {
   imageUrl?: string;
   sortOrder: number;
 };
+
+export type AboutPageContent = {
+  profileImageUrl: string;
+  bio: string[];
+  skills: Record<string, string[]>;
+};

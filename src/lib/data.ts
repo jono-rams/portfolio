@@ -1,6 +1,6 @@
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { firestoreDatabase } from './firebase';
-import type { HomePageContent, SkillsContent, Skill } from './types';
+import type { HomePageContent, SkillsContent, Skill, Project } from './types';
 
 export async function getHomePageContent(): Promise<HomePageContent> {
   // Create a reference to the specific document we want
@@ -10,7 +10,6 @@ export async function getHomePageContent(): Promise<HomePageContent> {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-      // If the document exists, return its data cast as our type
       return docSnap.data() as HomePageContent;
     } else {
       // If the document doesn't exist, return default fallback content
@@ -52,5 +51,18 @@ export async function getSkills(): Promise<Skill[]> {
   } catch (error) {
     console.error("Error fetching skills content:", error);
     return [];
+  }
+}
+
+export async function getProjects(): Promise<Project[]> {
+  const projectsQuery = query(collection(firestoreDatabase, 'projects'), orderBy('sortOrder', 'asc'));
+
+  try {
+    const querySnapshot = await getDocs(projectsQuery);
+    const projects = querySnapshot.docs.map(doc => doc.data() as Project);
+    return projects;
+  } catch (error) {
+    console.error("Error fetching projects:", error);
+    return []; 
   }
 }

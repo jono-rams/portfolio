@@ -8,6 +8,8 @@ type ButtonProps = {
     onClick?: () => void;
     variant?: 'primary' | 'secondary';
     className?: string;
+    type?: 'button' | 'submit' | 'reset';
+    disabled?: boolean;
 };
 
 const CustomButton = ({
@@ -17,6 +19,8 @@ const CustomButton = ({
     onClick,
     variant = 'primary',
     className = '',
+    type = 'button',
+    disabled = false,
 }: ButtonProps) => {
     const baseStyles =
         'px-6 py-3 font-semibold rounded-md text-center transition-transform duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-background';
@@ -44,7 +48,7 @@ const CustomButton = ({
     }
 
     return (
-        <button onClick={onClick} className={combinedClassName}>
+        <button type={type} onClick={onClick} className={combinedClassName} disabled={disabled}>
             {children}
         </button>
     );

@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
-
 const nextConfig = {
   reactStrictMode: true,
+  experimental: {
+    partytown: {
+      dest: '/~partytown',
+    },
+  },
   images: {
     remotePatterns: [
       {

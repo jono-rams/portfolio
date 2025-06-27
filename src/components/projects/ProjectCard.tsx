@@ -1,6 +1,10 @@
+"use client";
+
 import Image from 'next/image';
 import { Github, ArrowUpRight } from 'lucide-react';
 import type { Project } from '@/lib/types';
+import { trackProjectClick } from '@/lib/gtag';
+import {siteClicked} from '@/lib/analytics'
 
 type ProjectCardProps = {
     project: Project;
@@ -8,6 +12,11 @@ type ProjectCardProps = {
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
     const liveLinkText = project.category === 'Python' ? 'Package Site' : 'Live Site';
+
+    const handleLinkClick = () => {
+        trackProjectClick(project.title, project.title);
+        siteClicked(project);
+    };
 
     return (
         <div className="bg-surface rounded-lg shadow-lg flex flex-col group overflow-hidden">
@@ -42,13 +51,13 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
 
                 <div className="mt-auto flex items-center gap-4 pt-4 border-t border-white/10">
                     {project.githubUrl && (
-                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-text-secondary hover:text-accent transition-colors">
+                        <a onClick={handleLinkClick} href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-text-secondary hover:text-accent transition-colors">
                             <Github size={20} />
                             <span>Source</span>
                         </a>
                     )}
                     {project.liveUrl && (
-                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-text-secondary hover:text-accent transition-colors">
+                        <a onClick={handleLinkClick} href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-text-secondary hover:text-accent transition-colors">
                             <ArrowUpRight size={20} />
                             <span>{liveLinkText}</span>
                         </a>

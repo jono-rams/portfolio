@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from 'react';
-import Button from '../ui/Button';
+import CustomButton from '../ui/CustomButton';
 
 export default function ContactForm() {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
@@ -54,9 +54,9 @@ export default function ContactForm() {
 
       {status === 'error' && <p className="text-red-500">{errorMsg}</p>}
 
-      <Button type="submit" variant="primary" className="w-full" disabled={status === 'submitting'}>
+      <CustomButton type="submit" variant="primary" className="w-full" disabled={status === 'submitting'}>
         {status === 'submitting' ? 'Sending...' : 'Send Message'}
-      </Button>
+      </CustomButton>
     </form>
   );
 }

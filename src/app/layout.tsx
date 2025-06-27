@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-background text-text-main`}>
-        <GAnalytics /> 
+        {GA_TRACKING_ID && <GAnalytics />}
         <div className="flex flex-col min-h-screen">
           <Navbar />
           <main className="flex-grow container mx-auto p-4">{children}</main>

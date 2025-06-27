@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { Github, ArrowUpRight } from 'lucide-react';
 import type { Project } from '@/lib/types';
 
@@ -8,7 +7,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
-    let liveLinkText = project.category === 'Python' ? 'Package Site' : 'Live Site';
+    const liveLinkText = project.category === 'Python' ? 'Package Site' : 'Live Site';
 
     return (
         <div className="bg-surface rounded-lg shadow-lg flex flex-col group overflow-hidden">

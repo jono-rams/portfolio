@@ -1,6 +1,6 @@
 import { doc, getDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { firestoreDatabase } from './firebase';
-import type { HomePageContent, SkillsContent, Skill, Project } from './types';
+import type { HomePageContent, SkillsContent, Skill, Project, AboutPageContent } from './types';
 
 export async function getHomePageContent(): Promise<HomePageContent> {
   // Create a reference to the specific document we want
@@ -64,5 +64,20 @@ export async function getProjects(): Promise<Project[]> {
   } catch (error) {
     console.error("Error fetching projects:", error);
     return []; 
+  }
+}
+
+export async function getAboutPageContent(): Promise<AboutPageContent> {
+  const docRef = doc(firestoreDatabase, 'content', 'aboutPage');
+  try {
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      return docSnap.data() as AboutPageContent;
+    } else {
+      return { bio: ["Content not found."], profileImageUrl: '', skills: {} };
+    }
+  } catch (error) {
+    console.error("Error fetching about page content:", error);
+    return { bio: ["Error loading content."], profileImageUrl: '', skills: {} };
   }
 }

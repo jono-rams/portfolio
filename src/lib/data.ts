@@ -1,6 +1,6 @@
 import { doc, getDoc, collection, getDocs, orderBy, query } from 'firebase/firestore';
 import { firestoreDatabase } from './firebase';
-import type { HomePageContent, SkillsContent, Skill, Project, AboutPageContent } from './types';
+import type { HomePageContent, SkillsContent, Skill, Project, AboutPageContent, ContactPageContent } from './types';
 
 export async function getHomePageContent(): Promise<HomePageContent> {
   // Create a reference to the specific document we want
@@ -79,5 +79,20 @@ export async function getAboutPageContent(): Promise<AboutPageContent> {
   } catch (error) {
     console.error("Error fetching about page content:", error);
     return { bio: ["Error loading content."], profileImageUrl: '', skills: {} };
+  }
+}
+
+export async function getContactPageContent(): Promise<ContactPageContent> {
+  const docRef = doc(firestoreDatabase, 'content', 'contactPage');
+  try {
+    const docSnap = await getDoc(docRef);
+    if (docSnap.exists()) {
+      return docSnap.data() as ContactPageContent;
+    } else {
+      return { githubUrl: 'https://github.com/jono-rams', linkedinUrl: 'https://www.linkedin.com/in/jonathan-rampersad-47458a1a0/', email: 'jonathan@jono-rams.work' };
+    }
+  } catch (error) {
+    console.error("Error fetching contact page content:", error);
+    return { githubUrl: 'https://github.com/jono-rams', linkedinUrl: 'https://www.linkedin.com/in/jonathan-rampersad-47458a1a0/', email: 'jonathan@jono-rams.work' };
   }
 }

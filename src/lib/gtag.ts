@@ -35,7 +35,7 @@ export const event = ({ action, category, label, value }: GTagEvent) => {
   });
 };
 
-export const trackProjectClick = (projectTitle: string, projectID: string) => {
+export const trackProjectClick = (projectTitle: string) => {
   event({
     action: 'view_project',
     category: 'project_link', // More specific category

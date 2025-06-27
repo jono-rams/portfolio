@@ -15,7 +15,7 @@ const ProjectCard = ({ project, isPriority = false }: ProjectCardProps) => {
     const liveLinkText = project.category === 'Python' ? 'Package Site' : 'Live Site';
 
     const handleLinkClick = () => {
-        trackProjectClick(project.title, project.title);
+        trackProjectClick(project.title);
         siteClicked(project);
     };
 

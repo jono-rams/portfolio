@@ -1,5 +1,5 @@
 import { getHomePageContent } from '@/lib/data';
-import Button from '@/components/ui/Button';
+import CustomButton from '@/components/ui/CustomButton';
 import SkillsSection from '@/components/sections/SkillsSection';
 
 export const revalidate = 3600;
@@ -25,12 +25,12 @@ export default async function HomePage() {
           {content.introParagraph}
         </p>
         <div className="flex justify-center items-center space-x-4">
-          <Button href="/projects" variant="primary">
+          <CustomButton href="/projects" variant="primary">
             View My Work
-          </Button>
-          <Button href="https://firebasestorage.googleapis.com/v0/b/portfolio-21255.appspot.com/o/docs%2FResume.pdf?alt=media&token=4395395e-95af-4909-b79e-a806a0d84a22" target='_blank' variant="secondary" >
+          </CustomButton>
+          <CustomButton href="https://firebasestorage.googleapis.com/v0/b/portfolio-21255.appspot.com/o/docs%2FResume.pdf?alt=media&token=4395395e-95af-4909-b79e-a806a0d84a22" target='_blank' variant="secondary" >
             Download Resume
-          </Button>
+          </CustomButton>
         </div>
       </div>
     </section>

@@ -1,8 +1,5 @@
 const nextConfig = {
   reactStrictMode: true,
-  partytown: {
-    dest: '/~partytown',
-  },
   images: {
     remotePatterns: [
       {

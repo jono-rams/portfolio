@@ -15,3 +15,14 @@ export type Skill = {
 export type SkillsContent = {
   items: Skill[];
 };
+
+export type Project = {
+  title: string;
+  description: string;
+  category: string;
+  techStack: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  imageUrl?: string;
+  sortOrder: number;
+};

@@ -2,6 +2,9 @@
   "name": "portfolio-v2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -18,7 +21,7 @@
     "clsx": "^2.1.1",
     "firebase-admin": "^13.4.0",
     "lucide-react": "^0.525.0",
-    "next": "15.3.4",
+    "next": "15.3.8",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "resend": "^4.6.0",
@@ -27,12 +30,12 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
-    "eslint-config-next": "15.3.4",
+    "eslint-config-next": "15.3.8",
     "firebase": "^11.9.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4",
